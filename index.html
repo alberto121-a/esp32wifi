@@ -12,7 +12,8 @@
 
     <script>
         function toggleLED(state) {
-            fetch(`https://tu-servidor.com/control?state=${state}`)
+            // Cambia '192.168.4.1' por la IP de tu ESP32
+            fetch(`http://192.168.4.1/control?state=${state}`)
                 .then(response => response.text())
                 .then(data => {
                     console.log(data);
